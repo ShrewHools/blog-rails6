@@ -7,5 +7,7 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+// import 'bootstrap';
+require("bootstrap/dist/js/bootstrap")
 require("trix");
 require("@rails/actiontext");

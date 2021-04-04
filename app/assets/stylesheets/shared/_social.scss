@@ -1,0 +1,70 @@
+.shared-inst {
+  background: asset-url('social-icons-main.png') no-repeat -35px 0;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.shared-vk {
+  background: asset-url('social-icons-main.png') no-repeat -84px 0;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.shared-tw {
+  background: asset-url('social-icons-main.png') no-repeat 1px 0;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.shared-inst:hover {
+  background: asset-url('social-icons-main2.png') no-repeat -35px 0;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.shared-vk:hover {
+  background: asset-url('social-icons-main2.png') no-repeat -84px 0;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.shared-tw:hover {
+  background: asset-url('social-icons-main2.png') no-repeat 1px 0;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.social-main {
+  margin-top: 30px;
+  position: relative;
+  height: 30px;
+
+  ul {
+    position: absolute;
+    padding-left: 45%;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      -webkit-transition: all 0.6s ease-in-out;
+      -moz-transition: all 0.6s ease-in-out;
+      -o-transition: all 0.6s ease-in-out;
+      -ms-transition: all 0.6s ease-in-out;
+      transition: all 0.6s ease-in-out;
+    }
+  }
+}

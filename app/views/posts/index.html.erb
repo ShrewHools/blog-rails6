@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+  <div class="blog_post">
+    <%= image_tag post.preview_image, class: 'image' %>
+    <div class="title">
+      <%= link_to post.title, post_path(post) %>
+    </div>
+    <div class="time">
+      <%= post.created_at.to_formatted_s(:long_ordinal) %>
+    </div>
+    <div class="body">
+      <%= post.content %>
+    </div>
+    <%= link_to 'Read full post', post_path(post), class: 'button' %>
+  </div>
+<% end %>
