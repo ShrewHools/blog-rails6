@@ -30,9 +30,11 @@ gem 'devise'
 gem 'cancancan'
 gem 'rolify'
 
-
 gem 'webpacker', '~> 3.0'
 gem 'image_processing', '~> 1.2'
+
+gem 'will_paginate'
+gem 'will_paginate-bootstrap4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

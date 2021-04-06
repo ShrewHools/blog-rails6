@@ -14,6 +14,8 @@
       <%= link_to 'Read full post', post_path(post.id), class: 'button' %>
     </div>
   <% end %>
+
+  <%= will_paginate @posts_presenter.posts, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 <% end %>
 
 <% @posts_presenter.on_empty do %>

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts_presenter = Posts::PostsPresenter.new.gather_data
+    @posts_presenter = Posts::PostsPresenter.new(params[:page]).gather_data
   end
 
   def show
