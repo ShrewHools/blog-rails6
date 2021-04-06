@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
   def index
-    # TODO add will_paginate
-    # TODO add service
-    @posts = Post.all
+    @posts_presenter = Posts::PostsPresenter.new.gather_data
   end
 
   def show
-    @post = Post.find_by(id: params[:id])
+    @post_presenter = Posts::PostPresenter.new(params[:id])
   end
 end

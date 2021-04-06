@@ -1,7 +1,14 @@
-<div class="blog_post">
-  <h2 class="title">
-    <%= @post.title %>
-  </h2>
-  <%= image_tag @post.preview_image, class: 'image' %>
-  <div class="body"><%= @post.content %></div>
-</div>
+<% @post_presenter.on_present do %>
+  <div class="blog_post">
+    <h2 class="title">
+      <%= @post_presenter.post.title %>
+    </h2>
+    <%= image_tag @post_presenter.post.preview_image, class: 'image' %>
+    <div class="body"><%= @post_presenter.post.content %></div>
+  </div>
+<% end %>
+
+<% @post_presenter.on_empty do %>
+  <p>Пост не найден</p>
+  <% link_to 'Main page', root_path %>
+<% end %>

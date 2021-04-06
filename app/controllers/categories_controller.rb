@@ -1,6 +1,5 @@
 class CategoriesController < ApplicationController
   def show
-    @category = Category.find_by(id: params[:id])
-    @category_posts = @category.posts
+    @categories_presenter = Categories::CategoriesPresenter.new(params[:id]).gather_data
   end
 end

@@ -1,20 +1,27 @@
-<h1 class="category_name"><%= @category.name %></h1>
+<% @categories_presenter.on_present do %>
+  <h1 class="category_name"><%= @categories_presenter.category.name %></h1>
 
-<div class="container category_c">
-  <div class="row">
-    <% @category_posts.each do |t| %>
-      <div class="col-md-4 category_1">
-        <div class="category">
-          <%= image_tag t.preview_image, class: 'image' %>
-          <div class="hover_background">
-            <div class="hover_link"> <%= link_to t.title, post_path(t) %></div>
+  <div class="container category_c">
+    <% @categories_presenter.on_posts_present do %>
+      <div class="row">
+        <% @categories_presenter.posts_details.each do |post| %>
+          <div class="col-md-4 category_1">
+            <div class="category">
+              <%= image_tag post.preview_image, class: 'image' %>
+              <div class="hover_background">
+                <div class="hover_link">
+                  <%= link_to post.title, post_path(post.id) %>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
-  </div>
 
-  <% if @category_posts.blank? %>
-    <p class="category_blank">В данной категории нет записей</p>
-  <% end %>
-</div>
+    <% @categories_presenter.on_posts_empty do %>
+      <p class="category_blank">В данной категории нет записей</p>
+    <% end %>
+  </div>
+<% end %>
+
