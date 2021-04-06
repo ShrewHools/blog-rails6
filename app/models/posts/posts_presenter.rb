@@ -13,7 +13,7 @@ module Posts
     end
 
     def gather_data
-      @posts = Post.all.map do |post|
+      @posts = ar_post.all.map do |post|
         post_detail.new(post)
       end.paginate(page: page, per_page: 3)
 
