@@ -59,7 +59,10 @@ jobs:
           name: Database setup
           command: bundle exec rails db:schema:load --trace
       # Run rspec in parallel
-      - ruby/rspec-test
+      - run:
+          name: Run spec
+          command: |
+            bundle exec rails spec
       - run:
           name: Run unit test
           command: |
